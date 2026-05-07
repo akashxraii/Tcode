@@ -1,0 +1,17 @@
+{
+  "name": "technocode-worker",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "src/worker.js",
+  "scripts": {
+    "start": "node src/worker.js",
+    "dev": "node src/worker.js",
+    "test": "node --check src/worker.js && node --check src/runner.js"
+  },
+  "dependencies": {
+    "bullmq": "^5.76.6",
+    "dotenv": "^17.4.2",
+    "ioredis": "^5.10.1",
+    "pg": "^8.20.0"
+  }
+}
