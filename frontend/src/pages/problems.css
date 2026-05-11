@@ -1,26 +1,36 @@
 .problems-page {
-  min-height: 100vh;
   background:
     radial-gradient(circle at 20% 8%, rgba(80, 76, 98, 0.28), transparent 30%),
     linear-gradient(180deg, #121212 0%, #0a0a0a 62%, #111113 100%);
   color: #f4f4f0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   font-family: 'Manrope', sans-serif;
+  height: 100vh;
+  overflow: hidden;
   padding-top: 74px;
 }
 
 .problems-shell {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: minmax(200px, 250px) minmax(0, 1fr);
   gap: 24px;
+  flex: 1 1 auto;
   max-width: 1400px;
+  min-height: 0;
+  width: 100%;
   margin: 0 auto;
-  padding: 24px 44px 54px;
+  padding: 24px 44px;
 }
 
 .problems-sidebar {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-height: 100%;
+  overflow: hidden;
 }
 
 .daily-card {
@@ -42,8 +52,7 @@
 }
 
 .daily-card h2,
-.problem-library h1,
-.problems-footer h2 {
+.problem-library h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
   letter-spacing: 0;
@@ -131,13 +140,18 @@
 }
 
 .problem-library {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   min-width: 0;
+  min-height: 0;
 }
 
 .library-header {
   align-items: end;
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   display: flex;
+  flex: 0 0 auto;
   gap: 16px;
   justify-content: space-between;
   padding-bottom: 12px;
@@ -249,6 +263,11 @@
 .problem-list {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 6px;
+  scrollbar-gutter: stable;
 }
 
 .problem-row {
@@ -262,6 +281,7 @@
   padding: 7px 12px;
   text-decoration: none;
   transition: background-color 0.2s ease;
+  flex: 0 0 auto;
 }
 
 .problem-row:hover,
@@ -338,72 +358,6 @@
   padding: 4px 7px;
 }
 
-.problem-pagination {
-  align-items: center;
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  padding-top: 24px;
-}
-
-.problem-pagination button {
-  background: transparent;
-  border: 1px solid transparent;
-  color: #a0a0a0;
-  cursor: pointer;
-  font-family: 'Lora', serif;
-  font-size: 13px;
-  height: 30px;
-  min-width: 30px;
-}
-
-.problem-pagination .active-page,
-.problem-pagination button:hover,
-.problem-pagination button:focus-visible {
-  border-color: rgba(255, 255, 255, 0.1);
-  color: #f4f4f0;
-}
-
-.problem-pagination span {
-  color: #a0a0a0;
-  letter-spacing: 0.2em;
-}
-
-.problems-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 44px 24px 58px;
-  text-align: center;
-}
-
-.problems-footer h2 {
-  color: #f4f4f0;
-  font-size: 22px;
-  margin: 0 0 16px;
-}
-
-.problems-footer nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-
-.problems-footer a {
-  color: #c2beb3;
-  text-decoration: none;
-}
-
-.problems-footer a:hover,
-.problems-footer a:focus-visible {
-  color: #ffffff;
-}
-
-.problems-footer p {
-  color: #a0a0a0;
-  margin: 0;
-}
-
 .sr-only {
   clip: rect(0, 0, 0, 0);
   border: 0;
@@ -419,7 +373,8 @@
 @media (max-width: 1000px) {
   .problems-shell {
     grid-template-columns: 1fr;
-    padding: 48px 28px 84px;
+    grid-template-rows: auto minmax(0, 1fr);
+    padding: 24px 28px;
   }
 
   .problems-sidebar {
@@ -443,7 +398,7 @@
   }
 
   .problems-shell {
-    padding: 34px 20px 70px;
+    padding: 18px 20px;
   }
 
   .problems-sidebar {

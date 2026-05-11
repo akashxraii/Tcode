@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import '../App.css';
 
 function Home() {
   const observerRef = useRef(null);

@@ -111,20 +111,6 @@
   margin: 0;
 }
 
-.workspace-description strong {
-  color: #ffffff;
-}
-
-.workspace-description code,
-.example-box code {
-  background: rgba(244, 244, 240, 0.08);
-  border: 1px solid rgba(244, 244, 240, 0.08);
-  color: #f4f4f0;
-  font-family: 'Cascadia Code', Consolas, monospace;
-  font-size: 0.9em;
-  padding: 1px 5px;
-}
-
 .workspace-example {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   margin-top: 28px;

@@ -1,5 +1,4 @@
 import Navbar from "./components/navbar"
-import ScreenIntro from "./components/screenIntro"
 import Home from "./pages/home"
 import ProblemWorkspace from "./pages/problemWorkspace"
 import Problems from "./pages/problems"
@@ -9,11 +8,9 @@ import './App.css'
 function AppRoutes() {
   const location = useLocation();
   const isWorkspace = /^\/problems\/[^/]+/.test(location.pathname);
-  const isHome = location.pathname === "/";
 
   return (
     <>
-      {isHome && <ScreenIntro />}
       {!isWorkspace && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />

@@ -85,33 +85,9 @@ function Problems() {
               </Link>
             ))}
           </div>
-
-          <nav className="problem-pagination" aria-label="Problem pages">
-            <button type="button" aria-label="Previous page">
-              &lt;
-            </button>
-            <button className="active-page" type="button" aria-current="page">
-              1
-            </button>
-            <button type="button">2</button>
-            <button type="button">3</button>
-            <span>...</span>
-            <button type="button" aria-label="Next page">
-              &gt;
-            </button>
-          </nav>
         </section>
       </div>
 
-      <footer className="problems-footer">
-        <h2>Technocode</h2>
-        <nav aria-label="Footer links">
-          <a href="#docs">Documentation</a>
-          <a href="#privacy">Privacy</a>
-          <a href="#changelog">Changelog</a>
-        </nav>
-        <p>&copy; 2026 Technocode. Built for the focused mind.</p>
-      </footer>
     </main>
   );
 }

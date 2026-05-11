@@ -251,7 +251,6 @@ async function runDockerTest({ language, code, test }) {
 
 async function executeInDocker({ code, language, problemSlug, tests }) {
   const results = [];
-  const logs = [];
 
   for (const test of tests) {
     const result = await runDockerTest({ language, code, test });
@@ -284,7 +283,7 @@ async function executeInDocker({ code, language, problemSlug, tests }) {
 
   return {
     results,
-    logs,
+    logs: [],
     error: null,
   };
 }

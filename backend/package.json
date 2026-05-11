@@ -14,7 +14,6 @@
   "type": "commonjs",
   "dependencies": {
     "bullmq": "^5.76.6",
-    "bullmq": "^5.76.6",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",

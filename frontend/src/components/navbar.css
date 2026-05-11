@@ -133,18 +133,6 @@
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-.dropdown-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.03);
-    border-radius: 8px;
-    font-size: 20px;
-    flex-shrink: 0;
-}
-
 .dropdown-text {
     display: flex;
     flex-direction: column;
